@@ -9,7 +9,7 @@ body, html {
 
 body {
     font-family: 'Kaushan Script', cursive, Arial, Helvetica, sans-serif;
-    background-image: url(../images/background1.jpg);
+    background-image: url(../images/background.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,4 +21,21 @@ body {
     width: 100%;
     background-color: rgb(73, 9, 102);
     position: fixed;
+    z-index: -1;
+}
+
+.chatbox {
+    height: calc(100% - 40px);
+    width: 94%;
+    margin-top: 25px;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.form-rounded {
+    border-radius: 1rem;
 }
