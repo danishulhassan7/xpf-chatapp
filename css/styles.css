@@ -64,21 +64,16 @@ body {
     cursor: pointer;
 }
 
-.chatTemplate img {
-    width: 300px;
-    height:300px;
+.main-icon {
+    font-size: 260px;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-left: 300px;
+    color: rgb(71, 1, 104);
 }
 
 .text h2,.text h3 {
     margin: 0 auto;
     text-align: center;
-    margin-left: 240px;
     color: rgb(71, 1, 104);
     margin-top: 10px;
 }
-
 
