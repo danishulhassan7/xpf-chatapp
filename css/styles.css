@@ -55,3 +55,10 @@ body {
     line-height: 15px;
     max-height: 15px;
 }
+
+.icons {
+    font-size: 20px;
+    color: #c2bdbe;
+    text-align: right;
+    cursor: pointer;s
+}
