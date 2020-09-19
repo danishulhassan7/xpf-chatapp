@@ -61,5 +61,24 @@ body {
     font-size: 20px;
     color: #c2bdbe;
     text-align: right;
-    cursor: pointer;s
+    cursor: pointer;
 }
+
+.chatTemplate img {
+    width: 300px;
+    height:300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 300px;
+}
+
+.text h2,.text h3 {
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 240px;
+    color: rgb(71, 1, 104);
+    margin-top: 10px;
+}
+
+
