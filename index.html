@@ -41,7 +41,7 @@
                                 <img src="images/profiles/user.jpg" alt="profile" class="profile-pic img-fluid">
                             </div>
                             <div class="col-md-2 col-sm-2 col-2">
-                                <i class="fas fa-arrow-left fa-2x icons text-dark mt-2" onclick="hideChatList();"></i>
+                                <i class="fas fa-arrow-left fa-2x icons text-dark mt-2 d-md-none" onclick="hideChatList();"></i>
                             </div>
                         </div>
                         <ul class="list-group list-group-flush" style="background-color: #c8c8c8;">
@@ -100,10 +100,13 @@
                 <div class="card h-100">
                     <div class="card-header">
                         <div class="row">
+                            <div class="col-md-1 col-sm-1 col-1 col-lg-1">
+                                <i class="fas fa-list fa-2x icons text-dark mt-3" onclick="showChatList();"></i>
+                            </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                                 <img src="images/profiles/user.jpg" alt="profile" class="profile-pic img-fluid">
                             </div>
-                            <div class="col-lg-6 col-md-5 col-sm-6 col-4">
+                            <div class="col-lg-5 col-md-4 col-sm-5 col-3">
                                 <div class="name">Name</div>
                                 <div class="message">Last seen at 12:58 am</div>
                             </div>
@@ -135,7 +138,7 @@
                        <div class="text-center text col-12 col-sm-12">
                         <h2 class="ml-5">Stay connected with your love ones</h2>
                         <h3 class="ml-5">Search your friends to start new chat</h3>
-                        <a href="#" class="btn btn-info mt-2" onclick="showChatList();"> <i class="fas fa-plus"></i> New Chat</a>
+                        <a href="#" class="btn btn-info mt-2 d-md-none" onclick="showChatList();"> <i class="fas fa-plus"></i> New Chat</a>
                  </div>
             </div>
         </div>
