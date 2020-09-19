@@ -33,9 +33,25 @@ body {
 .profile-pic {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
 }
 
+.friends-pic {
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+}
 .form-rounded {
     border-radius: 1rem;
+}
+
+.name {
+    font-weight: 500;
+    color: #000000;
+
+}
+
+.message {
+    font-size: 12px;
+    line-height: 15px;
+    max-height: 15px;
 }
