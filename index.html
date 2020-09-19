@@ -46,7 +46,7 @@
                             <li class="list-group-item">
                                 <input type="text" placeholder="Search or New Chat" class="form-control form-rounded">
                             </li>
-                            <li class="list-group-item list-group-item-action">
+                            <li class="list-group-item list-group-item-action" onclick="startChat(1);">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <img src="images/profiles/avatar.png" alt="profile" class="friends-pic img-fluid">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 pl-0" style="display: none;">
+            <div class="col-md-8 pl-0" id="chatPanel" style="display: none;">
                 <div class="card h-100">
                     <div class="card-header">
                         <div class="row">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="chatTemplate text-center" id="">
+            <div class="chatTemplate text-center" id="startTemplate">
                 <img src="images/chat.svg" alt="Chat Template SVG" class="img-fluid svg-img">
                <div class="text-center text">
                 <h2>Stay connected with your love ones</h2>
