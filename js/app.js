@@ -47,4 +47,8 @@ function sendMessage() {
     document.getElementById('messages').innerHTML += message;
     document.getElementById('textMessage').value = '';
     document.getElementById('textMessage').focus();
+
+    // Scrolling bug 
+
+    document.getElementById('messages').scrollTo(0,document.getElementById('messages').clientHeight);
 }
