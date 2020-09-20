@@ -71,12 +71,21 @@ function sendMessage() {
 //     firebase.auth().onAuthStateChanged(onStateChanged);
 // }
 
-// function onStateChanged(user) {
-//     if (user) {
-//         document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
-//         document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
-//     }
-// }
+function onStateChanged(user) {
+    if (user) {
+        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+        document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
+
+        document.getElementById('linkSignin').style ='display:none';
+        document.getElementById('linkSignout').style = '';
+    }else {
+        document.getElementById('imgProfile').src = 'images/profiles/user.jpg';
+        document.getElementById('imgProfile').title = '';
+
+        document.getElementById('linkSignin').style ='';
+        document.getElementById('linkSignout').style = 'display:none';
+    }
+}
 
 //Call auth state changed 
 // onFirebaseStateChanged();

@@ -123,6 +123,16 @@ body {
     overflow-x: hidden;
 }
 
+/* working on dropdown  */
+
+.dropdown-toggle::before {
+    display: none !important;
+}
+
+.fa-ellipsis-v {
+    float: right !important;
+    text-align: right !important;
+}
 @media (max-width:800px) {
     .chatTemplate {
         width: 560px;
