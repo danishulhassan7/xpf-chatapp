@@ -38,7 +38,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-10 col-sm-10 col-10 mb-2">
-                                <img src="images/profiles/user.jpg" alt="profile" class="profile-pic img-fluid">
+                                <img src="images/profiles/user.jpg" alt="profile" class="profile-pic img-fluid rounded-circle" id="imgProfile">
                             </div>
                             <div class="col-md-2 col-sm-2 col-2">
                                 <i class="fas fa-arrow-left fa-2x icons text-dark mt-2 d-md-none" onclick="hideChatList();"></i>
@@ -159,8 +159,9 @@
                         <i class="fas fa-comments main-icon mt-5 ml-5"></i>
                        <div class="text-center text col-12 col-sm-12">
                         <h2 class="ml-5">Stay connected with your love ones</h2>
-                        <h3 class="ml-5">Search your friends to start new chat</h3>
                         <a href="#" class="btn btn-info mt-2 d-md-none" onclick="showChatList();"> <i class="fas fa-plus"></i> New Chat</a>
+                        <button class="btn btn-primary mt-2" onclick="signIn();"> <i class="fas fa-plus rounded-circle"></i> Sign In</button>
+                        <button class="btn btn-danger mt-2" onclick="signOut();"> <i class="fas fa-cross"></i> Sign Out</button>
                  </div>
             </div>
         </div>
@@ -174,6 +175,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- firebase  -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
     <!-- smooth scroll from Github  -->
     <!-- <script src="js/smooth-scroll.js"></script>
     <script>
@@ -181,6 +185,7 @@
     </script> -->
     <!-- Js File  -->
     <script src="js/app.js"></script>
+    <script src="js/firebase.init.js"></script>
 </body>
 
 </html>

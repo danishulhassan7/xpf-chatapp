@@ -51,4 +51,32 @@ function sendMessage() {
     // Scrolling bug 
 
     document.getElementById('messages').scrollTo(0,document.getElementById('messages').clientHeight);
+
 }
+
+
+// Firebase authentication 
+
+function signIn() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+
+}
+
+function signOut() {
+    firebase.auth().signOut();
+}
+
+function onFirebaseStateChanged() {
+    firebase.auth().onAuthStateChanged(onStateChanged);
+}
+
+function onStateChanged(user) {
+    if (user) {
+        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+        document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
+    }
+}
+
+//Call auth state changed 
+onFirebaseStateChanged();
