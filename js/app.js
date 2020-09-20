@@ -73,17 +73,57 @@ function sendMessage() {
 
 function onStateChanged(user) {
     if (user) {
+
+        // storing data in firebase
+        
+        var userProfile = { 
+            email:'',
+            username:'',
+            photoURL:''
+        };
+
+        userProfile.email = firebase.auth().currentUser.email;
+        userProfile.username = firebase.auth().currentUser.displayName;
+        userProfile.photoURL = firebase.auth().currentUser.photoURL;
+
+        var db = firebase.database().ref('users');
+        var flag = true;
+
+        db.on('value', function(users) {
+            users.forEach(function(data){
+                var user = data.val();
+                if(user.email === userProfile.email) 
+                    flag = true;
+            });
+            if(flag===false) {
+                firebase.database().ref('users').push(userProfile,callback);
+            } else {
         document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
         document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
 
         document.getElementById('linkSignin').style ='display:none';
         document.getElementById('linkSignout').style = '';
+            }
+        });
+
     }else {
         document.getElementById('imgProfile').src = 'images/profiles/user.jpg';
         document.getElementById('imgProfile').title = '';
 
         document.getElementById('linkSignin').style ='';
         document.getElementById('linkSignout').style = 'display:none';
+    }
+}
+
+function callback(error) {
+    if(error) {
+        alert(error);
+    }else {
+        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+        document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
+
+        document.getElementById('linkSignin').style ='display:none';
+        document.getElementById('linkSignout').style = '';
     }
 }
 
