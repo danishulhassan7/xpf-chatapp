@@ -65,8 +65,9 @@ body {
 }
 
 .main-icon {
-    font-size: 260px;
+    font-size: 220px;
     text-align: center;
+    margin: 0 auto;
     color: rgb(71, 1, 104);
 }
 
@@ -74,6 +75,68 @@ body {
     margin: 0 auto;
     text-align: center;
     color: rgb(71, 1, 104);
-    margin-top: 10px;
+    margin-top: 5px;
+}
+
+.chatTemplate {
+    width: 530px;
+    margin: 0 auto;
+}
+
+
+
+/* card body (sent and recieve messages) */
+.chat-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.recieve-msg {
+    background-color: rgb(100, 3, 144);
+    color: #ffffff;
+    border-radius: 1rem;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
+.time {
+    font-size: 60%;
+    color: rgb(209, 198, 198);
+    margin-left: 16px;
+}
+
+.sent-msg {
+    background-color: rgb(240, 230, 230);
+    color: rgb(100, 3, 144);
+    border-radius: 1rem;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
+.card {
+    
+}
+
+@media (max-width:800px) {
+    .chatTemplate {
+        width: 560px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:600px) {
+    .chatTemplate {
+        width: 640px;
+        margin: 0 auto;
+        font-size: 90%;
+    }
+}
+
+@media (max-width:420px) {
+    .chatTemplate {
+        width: 340px;
+        margin: 0 auto;
+    }
 }
 

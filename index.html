@@ -34,7 +34,7 @@
     <div class="container-fluid bg-white shadow-lg rounded chatbox">
         <div class="row h-100">
             <div class="col-md-4 pr-0 d-none d-md-block" id="side-1">
-                <div class="card h-100">
+                <div class="card">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-10 col-sm-10 col-10 mb-2">
@@ -106,25 +106,47 @@
                             <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                                 <img src="images/profiles/user.jpg" alt="profile" class="profile-pic img-fluid">
                             </div>
-                            <div class="col-lg-5 col-md-4 col-sm-5 col-3">
+                            <div class="col-lg-5 col-md-4 col-sm-4 col-3">
                                 <div class="name">Name</div>
                                 <div class="message">Last seen at 12:58 am</div>
                             </div>
-                            <div class="col-lg-4 col-md-5 col-sm-4 col-6 icons">
+                            <div class="col-lg-4 col-md-5 col-sm-5 col-6 icons">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip ml-4"></i>
                                 <i class="fas fa-ellipsis-v ml-4"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body" id="messages">
+                        <div class="row">
+                            <div class="col-2 col-sm-1 col-md-1">
+                                <img src="images/profiles/avatar.png" alt="profile" class="chat-pic img-fluid">
+                            </div>
+                            <div class="col-sm-8 col-8 col-md-7">
+                                <p class="recieve-msg">This is just an example text
+                                    <span class="small time">4.17 PM</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-end">
+                            <div class="col-sm-8 col-8 col-md-7">
+                                <p class="sent-msg float-right">This is just an example text
+                                    <span class="small time">8.35 PM</span>
+                                </p>
+                            </div>
+                            <div class="col-2 col-sm-1 col-md-1">
+                                <img src="images/profiles/avatar.png" alt="profile" class="chat-pic img-fluid">
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-md-1 col-2 icons">
                                 <i class="far fa-grin fa-2x"></i>
                             </div>
                             <div class="col-md-10 col-8">
-                                <input type="text" class="form-control form-rounded" placeholder="Type here...">
+                                <input type="text" id="textMessage" onclick="onKeyDown();" class="form-control form-rounded" placeholder="Type here...">
                             </div>
                             <div class="col-md-1 col-2 icons">
                                 <i class="fas fa-microphone fa-2x"></i>
@@ -134,7 +156,7 @@
                 </div>
             </div>
                  <div class="chatTemplate text-center" id="startTemplate">
-                        <i class="fas fa-comments main-icon mt-5"></i>
+                        <i class="fas fa-comments main-icon mt-5 ml-5"></i>
                        <div class="text-center text col-12 col-sm-12">
                         <h2 class="ml-5">Stay connected with your love ones</h2>
                         <h3 class="ml-5">Search your friends to start new chat</h3>
