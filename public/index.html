@@ -49,9 +49,27 @@
                                         <i class="fas fa-ellipsis-v fa-2x icons text-dark mt-2" onclick="hideChatList();"></i>
                                     </span>
                                     <div class="dropdown-menu">
-                                        <a href="" class="dropdown-item">New Chat</a>
-                                        <a href="" id="linkSignin" onclick="signIn();" class="dropdown-item">Sign In</a>
-                                        <a href="" id="linkSignout" onclick="signOut();" class="dropdown-item" style="display: none;">Sign Out</a>
+                                        <a class="dropdown-item" onclick="populateFriendList();" data-toggle="modal" data-target="#modalFriendList">New Chat</a>
+                                        <a id="linkSignin" onclick="signIn();" class="dropdown-item">Sign In</a>
+                                        <a id="linkSignout" onclick="signOut();" class="dropdown-item" style="display: none;">Sign Out</a>
+                                    </div>
+
+                                    <div class="modal fade" id="modalFriendList">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h3>Friend List
+                                                            <span class="close" data-dismiss="modal" style="cursor: pointer;">
+                                                            <i class="fas fa-times"></i>
+                                                            </span>
+                                                        </h3>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush" id="ListOfFriends"style="background-color: #c8c8c8;">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

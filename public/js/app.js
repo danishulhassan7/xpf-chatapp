@@ -54,78 +54,84 @@ function sendMessage() {
 
 }
 
+// Modal 
+
+function populateFriendList() {
+    document.getElementById('ListOfFriends').innerHTML = `<div class="text-center"><spanclass="spinner-border mt-5 text-primary" style="width:7rem; height:7rem;"></span></div>`;
+}
+
 
 // Firebase authentication 
 
-function signIn() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+// function signIn() {
+//     var provider = new firebase.auth.GoogleAuthProvider();
+//     firebase.auth().signInWithPopup(provider);
 
-}
+// }
 
-function signOut() {
-    firebase.auth().signOut();
-}
+// function signOut() {
+//     firebase.auth().signOut();
+// }
 
-function onFirebaseStateChanged() {
-    firebase.auth().onAuthStateChanged(onStateChanged);
-}
+// function onFirebaseStateChanged() {
+//     firebase.auth().onAuthStateChanged(onStateChanged);
+// }
 
-function onStateChanged(user) {
-    if (user) {
+// function onStateChanged(user) {
+//     if (user) {
 
-        // storing data in firebase
+//         storing data in firebase
         
-        var userProfile = { 
-            email:'',
-            username:'',
-            photoURL:''
-        };
+//         var userProfile = { 
+//             email:'',
+//             username:'',
+//             photoURL:''
+//         };
 
-        userProfile.email = firebase.auth().currentUser.email;
-        userProfile.username = firebase.auth().currentUser.displayName;
-        userProfile.photoURL = firebase.auth().currentUser.photoURL;
+//         userProfile.email = firebase.auth().currentUser.email;
+//         userProfile.username = firebase.auth().currentUser.displayName;
+//         userProfile.photoURL = firebase.auth().currentUser.photoURL;
 
-        var db = firebase.database().ref('users');
-        var flag = true;
+//         var db = firebase.database().ref('users');
+//         var flag = true;
 
-        db.on('value', function(users) {
-            users.forEach(function(data){
-                var user = data.val();
-                if(user.email === userProfile.email) 
-                    flag = true;
-            });
-            if(flag===false) {
-                firebase.database().ref('users').push(userProfile,callback);
-            } else {
-        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
-        document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
+//         db.on('value', function(users) {
+//             users.forEach(function(data){
+//                 var user = data.val();
+//                 if(user.email === userProfile.email) 
+//                     flag = true;
+//             });
+//             if(flag===false) {
+//                 firebase.database().ref('users').push(userProfile,callback());
+//             } else {
+//         document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+//         document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
 
-        document.getElementById('linkSignin').style ='display:none';
-        document.getElementById('linkSignout').style = '';
-            }
-        });
+//         document.getElementById('linkSignin').style ='display:none';
+//         document.getElementById('linkSignout').style = '';
+//             }
+//         });
 
-    }else {
-        document.getElementById('imgProfile').src = 'images/profiles/user.jpg';
-        document.getElementById('imgProfile').title = '';
+//     }else {
+//         document.getElementById('imgProfile').src = 'images/profiles/user.jpg';
+//         document.getElementById('imgProfile').title = '';
 
-        document.getElementById('linkSignin').style ='';
-        document.getElementById('linkSignout').style = 'display:none';
-    }
-}
+//         document.getElementById('linkSignin').style ='';
+//         document.getElementById('linkSignout').style = 'display:none';
+//     }
+// }
 
-function callback(error) {
-    if(error) {
-        alert(error);
-    }else {
-        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
-        document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
+// function callback(error) {
+//     if(error) {
+//         alert(error);
+//     }else {
+//         document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+//         document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
 
-        document.getElementById('linkSignin').style ='display:none';
-        document.getElementById('linkSignout').style = '';
-    }
-}
+//         document.getElementById('linkSignin').style ='display:none';
+//         document.getElementById('linkSignout').style = '';
+//     }
+// }
 
 //Call auth state changed 
-onFirebaseStateChanged();
+// onFirebaseStateChanged();
