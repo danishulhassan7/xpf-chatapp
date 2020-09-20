@@ -57,26 +57,26 @@ function sendMessage() {
 
 // Firebase authentication 
 
-function signIn() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+// function signIn() {
+//     var provider = new firebase.auth.GoogleAuthProvider();
+//     firebase.auth().signInWithPopup(provider);
 
-}
+// }
 
-function signOut() {
-    firebase.auth().signOut();
-}
+// function signOut() {
+//     firebase.auth().signOut();
+// }
 
-function onFirebaseStateChanged() {
-    firebase.auth().onAuthStateChanged(onStateChanged);
-}
+// function onFirebaseStateChanged() {
+//     firebase.auth().onAuthStateChanged(onStateChanged);
+// }
 
-function onStateChanged(user) {
-    if (user) {
-        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
-        document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
-    }
-}
+// function onStateChanged(user) {
+//     if (user) {
+//         document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+//         document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
+//     }
+// }
 
 //Call auth state changed 
-onFirebaseStateChanged();
+// onFirebaseStateChanged();
